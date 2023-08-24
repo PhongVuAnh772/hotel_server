@@ -13,7 +13,8 @@ const addRoleHost = (req, res) => {
             return res.status(200).json({
                 success: true,
                 message: 'Thêm quyền cho user thành công',
-                updatedAccount: updatedAccount
+                updatedAccount: updatedAccount,
+                dataAccount: dataAccount
             })
         })
         .catch(err => {
@@ -33,6 +34,6 @@ const addRoleHost = (req, res) => {
     })
 }
 
-module.export = {
+module.exports = {
     addRoleHost
 }

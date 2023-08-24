@@ -171,7 +171,7 @@ const signIn = (req, res) => {
 const isAuth = (req, res) => {
 
 }
-module.export = {
+module.exports = {
   signUp,
   signIn,
   isAuth

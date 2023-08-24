@@ -109,8 +109,15 @@ const addHotel = (req, res) => {
   }
 };
 
-const getHotelByType = (req, res) => {
-    
+const getHotelByType = async(req, res) => {
+        const response = await db.hotel.findAll({
+            where: {
+                hotel_type: req.body.hotelType,
+            },
+            include: [{ model: db.locations, as: "locationData" }]
+        });
+        return res.status(200).json(response);    
+
 }
 
 module.exports = {
